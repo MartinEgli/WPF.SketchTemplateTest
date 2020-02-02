@@ -1,0 +1,63 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModelInterfaces="clr-namespace:WPF.SketchTemplateTest.ViewModelInterfaces"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit">
+    <DataTemplate x:Key="SketchDataTemplate">
+        <Border Background="Aqua">
+            <TextBlock>Hallo</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ParameterDataTemplate" DataType="{x:Type viewModelInterfaces:ParameterViewModel}">
+        <Border Background="Red">
+            <TextBlock HorizontalAlignment="Stretch">Hallo</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="StringParameterTemplate" DataType="{x:Type viewModelInterfaces:StringParameterViewModel}">
+        <Border HorizontalAlignment="Stretch" Background="Transparent">
+            <TextBox
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Stretch"
+                Text="{Binding Text}" />
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="IntegerParameterTemplate" DataType="{x:Type viewModelInterfaces:IntegerParameterViewModel}">
+        <xctk:IntegerUpDown
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            Value="{Binding Value, Mode=TwoWay}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Sketch1Template">
+        <Border Background="Pink">
+            <TextBlock>Sketch 1</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Sketch2Template">
+        <Border Background="Green">
+            <TextBlock>Sketch 2</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Sketch3Template">
+        <Border Background="DeepSkyBlue">
+            <TextBlock>Sketch 3</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Sketch4Template">
+        <Border Background="Orange">
+            <TextBlock>Sketch 4</TextBlock>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="Sketch5Template">
+        <Border Background="BurlyWood">
+            <TextBlock>Sketch 5</TextBlock>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

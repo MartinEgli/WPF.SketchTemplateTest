@@ -1,0 +1,30 @@
+﻿<viewModels:ParametersDummyViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:markup="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:models="clr-namespace:WPF.SketchTemplateTest.Models"
+    xmlns:viewModelInterfaces="clr-namespace:WPF.SketchTemplateTest.ViewModelInterfaces"
+    xmlns:viewModels="clr-namespace:WPF.SketchTemplateTest.ViewModels"
+    Title="My TITLE">
+    <viewModels:ParametersDummyViewModel.SketchTemplate>
+        <DataTemplate>
+            <Border Background="Aqua">
+                <TextBlock>Hallo</TextBlock>
+            </Border>
+        </DataTemplate>
+    </viewModels:ParametersDummyViewModel.SketchTemplate>
+    <viewModels:ParametersDummyViewModel.ParameterTemplateDictionary>
+        <viewModelInterfaces:ParameterTemplateDictionary>
+            <viewModels:ParameterTemplate Key="ParameterViewModel">
+                <viewModels:ParameterTemplate.Value>
+                    <DataTemplate>
+                        <Label>DataTemplate ParameterViewModel</Label>
+                    </DataTemplate>
+                </viewModels:ParameterTemplate.Value>
+            </viewModels:ParameterTemplate>
+        </viewModelInterfaces:ParameterTemplateDictionary>
+    </viewModels:ParametersDummyViewModel.ParameterTemplateDictionary>
+    <viewModels:ParametersDummyViewModel.Parameters>
+        <viewModelInterfaces:ParameterViewModel />
+        <viewModelInterfaces:ParameterViewModel />
+    </viewModels:ParametersDummyViewModel.Parameters>
+</viewModels:ParametersDummyViewModel>
