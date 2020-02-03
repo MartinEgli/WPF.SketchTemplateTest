@@ -10,7 +10,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="ParameterDataTemplate" DataType="{x:Type viewModelInterfaces:ParameterViewModel}">
-        <Border Background="Red">
+        <Border Background="CadetBlue">
             <TextBlock HorizontalAlignment="Stretch">Hallo</TextBlock>
         </Border>
     </DataTemplate>

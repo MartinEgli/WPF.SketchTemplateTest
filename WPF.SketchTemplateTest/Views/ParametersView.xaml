@@ -25,11 +25,11 @@
                 <Setter Property="Height" Value="30" />
                 <Setter Property="HorizontalAlignment" Value="Stretch" />
                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                <Setter Property="b:Interaction.Behaviors">
+                <!--<Setter Property="b:Interaction.Behaviors">
                     <Setter.Value>
                         <sketchTemplateTest:SelectOnFocus />
                     </Setter.Value>
-                </Setter>
+                </Setter>-->
             </Style.Setters>
         </Style>
     </UserControl.Resources>
@@ -44,7 +44,7 @@
         <StackPanel Grid.Column="0">
             <ContentControl
                 x:Name="Sketch"
-                Content="{Binding Title}"
+                Content="{Binding}"
                 ContentTemplate="{Binding SketchTemplate}" />
         </StackPanel>
 
@@ -56,9 +56,9 @@
             ItemTemplateSelector="{sketchTemplateTest:ParameterTemplateSelectorExtension DictionaryBinding={Binding ParameterTemplateDictionary}}"
             ItemsSource="{Binding Parameters}"
             SelectionMode="Single">
-            <b:Interaction.Behaviors>
+            <!--<b:Interaction.Behaviors>
                 <sketchTemplateTest:SelectOnFocus />
-            </b:Interaction.Behaviors>
+            </b:Interaction.Behaviors>-->
             <b:Interaction.Triggers>
 
                 <b:EventTrigger EventName="SelectionChanged">
